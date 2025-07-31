@@ -10,7 +10,7 @@ if (SUPABASE_URL === 'YOUR_SUPABASE_URL' || SUPABASE_ANON_KEY === 'YOUR_SUPABASE
     alert('重要提醒：请在 script.js 文件中设置你的 Supabase URL 和 Anon Key！');
 }
 
-const supabase = supabase_createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 
 // 2. DOM 元素引用
