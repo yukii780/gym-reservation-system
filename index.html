@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>健身房预约系统</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>健身房课程预约</h1>
+            <p>查看可用课程并立即预约您的位置！</p>
+        </header>
+
+        <main>
+            <section id="classes-section">
+                <h2>可用课程</h2>
+                <div id="classes-list" class="loading">正在加载课程...</div>
+            </section>
+
+            <section id="booking-section">
+                <h2>立即预约</h2>
+                <form id="booking-form">
+                    <div class="form-group">
+                        <label for="class-select">选择课程:</label>
+                        <select id="class-select" name="class" required>
+                            <option value="">请先选择课程</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="member-name">您的姓名:</label>
+                        <input type="text" id="member-name" name="name" required placeholder="请输入您的姓名">
+                    </div>
+                    <button type="submit" id="submit-button">确认预约</button>
+                </form>
+                <div id="message-feedback"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
